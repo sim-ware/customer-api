@@ -1,0 +1,26 @@
+{
+  "name": "customer-api",
+  "version": "1.0.0",
+  "description": "A simple API to handle customer interactions",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sim-ware/customer-api.git"
+  },
+  "author": "sim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sim-ware/customer-api/issues"
+  },
+  "homepage": "https://github.com/sim-ware/customer-api#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.4",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.2"
+  }
+}
