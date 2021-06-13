@@ -1,10 +1,11 @@
 import { getOrdersByCustomerId } from './orderService'
 import { getItemById } from './itemService'
 import { getOrderItemByOrderId } from './orderItemService'
+import { CustomerOrderHistoryDetail } from '../db/schema'
 
 
 export async function getFullCustomerOrderHistory(id: string) {
-  const result: { orderId: string; supplierId: string; itemId: string; supplierName: string; itemName: string; cost: number; date: string }[] = []
+  const result: CustomerOrderHistoryDetail[] = []
   const allCustomerOrders = await getOrdersByCustomerId(id)
   
   for (const customerOrder of allCustomerOrders) {

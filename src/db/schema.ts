@@ -15,3 +15,13 @@ export interface OrderItem {
   order_id: string;
   item_id: string;
 }
+
+export interface CustomerOrderHistoryDetail {
+  orderId: string;
+  supplierId: string;
+  itemId: string;
+  supplierName: string;
+  itemName: string;
+  cost: number;
+  date: string
+}
