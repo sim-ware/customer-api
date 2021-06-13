@@ -18,6 +18,6 @@ $ npm start
 
 
 
-http://localhost:8000/getFullCustomerOrderHistory?id=ca48570d-6265-453a-b9da-ca9bc982bfee
-http://localhost:8000/getFullCustomerOrderHistory
-http://localhost:8000/getFullCustomerOrderHistory?id=invalid_id
+http://localhost:8000/getFullOrderHistoryByCustomer?id=ca48570d-6265-453a-b9da-ca9bc982bfee
+http://localhost:8000/getFullOrderHistoryByCustomer
+http://localhost:8000/getFullOrderHistoryByCustomer?id=invalid_id

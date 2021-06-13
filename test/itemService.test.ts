@@ -23,6 +23,6 @@ describe("test getItemById()", () => {
   it('should throw Invalid ID errors', async () =>  {        
     await expect(getItemById('invalid-id'))
     .rejects
-    .toThrow('Invalid Item ID');
+    .toThrow("Invalid ID - Data does not exist");
 });
 });
