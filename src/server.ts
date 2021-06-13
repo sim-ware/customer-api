@@ -5,9 +5,14 @@ const PORT = 8000;
 
 app.get('/', (_, res) => res.send('⚡️⚡️⚡️ Customer API Express + TypeScript Server ⚡️⚡️⚡️'));
 
-app.get('/getFullCustomerOrderHistory', (_, res) => {
-  const exampleId = 'ca48570d-6265-453a-b9da-ca9bc982bfee'
-  const customerOrderHistory = getFullCustomerOrderHistory(exampleId)
+app.get('/getFullCustomerOrderHistory', async (req, res) => {
+  if (!req.query.id) {
+    const errorMessage = 'No Customer ID supplied'
+    res.status(400).send(errorMessage);
+    // throw new Error(errorMessage)
+  }
+
+  const customerOrderHistory = await getFullCustomerOrderHistory(req.query.id as string)
   res.send(customerOrderHistory)
 });
 
