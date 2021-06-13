@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon src/server.ts",
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "db-test": "ts-node sqlite3test.ts"
   },
   "repository": {
     "type": "git",
