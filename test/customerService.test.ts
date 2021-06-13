@@ -1,9 +1,9 @@
-import { getCustomerOrderHistory } from "../src/services/customerService";
+import { getFullCustomerOrderHistory } from "../src/services/customerService";
 
 
-describe("test getCustomerOrderHistory()", () => {
+describe("test getFullCustomerOrderHistory()", () => {
   it("should return a detailed History of the Customers Orders", async () => {
-    const result = await getCustomerOrderHistory('ca48570d-6265-453a-b9da-ca9bc982bfee')
+    const result = await getFullCustomerOrderHistory('ca48570d-6265-453a-b9da-ca9bc982bfee')
     expect(result).toStrictEqual([
       {
         cost: 220,

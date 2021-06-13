@@ -1,7 +1,7 @@
 import { getOrderItemByOrderId } from "../src/services/orderItemService";
 
 
-describe("test getCustomerOrderHistory()", () => {
+describe("test getOrderItemByOrderId()", () => {
   it("should return all Orders with specified Customer ID", async () => {
     const resultOne = await getOrderItemByOrderId('fbe2b58f-75f0-44ae-a3b0-fe681da5f14d')
     const resultTwo = await getOrderItemByOrderId('b45f16df-30b1-4437-b942-fd7c0fa46038')

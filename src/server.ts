@@ -1,13 +1,13 @@
 import express from 'express';
-import { getCustomerOrderHistory } from './services/customerService'
+import { getFullCustomerOrderHistory } from './services/customerService'
 const app = express();
 const PORT = 8000;
 
 app.get('/', (_, res) => res.send('⚡️⚡️⚡️ Customer API Express + TypeScript Server ⚡️⚡️⚡️'));
 
-app.get('/getCustomerOrderHistory', (_, res) => {
+app.get('/getFullCustomerOrderHistory', (_, res) => {
   const exampleId = 'ca48570d-6265-453a-b9da-ca9bc982bfee'
-  const customerOrderHistory = getCustomerOrderHistory(exampleId)
+  const customerOrderHistory = getFullCustomerOrderHistory(exampleId)
   res.send(customerOrderHistory)
 });
 

@@ -3,7 +3,7 @@ import { getItemById } from './itemService'
 import { getOrderItemByOrderId } from './orderItemService'
 
 
-export async function getCustomerOrderHistory(id: string) {
+export async function getFullCustomerOrderHistory(id: string) {
   const result: { orderId: string; supplierId: string; itemId: string; supplierName: string; itemName: string; cost: number; date: string }[] = []
   const allCustomerOrders = await getOrdersByCustomerId(id)
   
